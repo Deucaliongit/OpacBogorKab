@@ -71,4 +71,13 @@
     .navbar-nav{
         display: flex;
     }
+    
+}
+
+@media screen and (max-width: 600px) {
+  .brand-text {
+    /* Gunakan !important jika class fs-24 sulit ditimpa */
+    font-size: 18px !important; 
+    letter-spacing: 0.5px !important; /* Opsional: kecilkan jarak antar huruf juga */
+  }
 }

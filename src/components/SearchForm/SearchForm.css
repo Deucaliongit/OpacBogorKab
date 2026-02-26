@@ -13,3 +13,34 @@
 .search-form-elem .form-control::placeholder{
     opacity: 0.9;
 }
+
+/* Pengaturan Default (Desktop) */
+.search-form-elem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search-form-elem .form-control {
+    flex: 1; /* Ini kunci agar input mau mengecil jika ruang sempit */
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+/* Pengaturan Khusus HP (Mobile) */
+@media screen and (max-width: 600px) {
+    .search-form-elem {
+        padding: 0.8rem 1.5rem !important; /* Kecilkan padding dalam */
+        border-radius: 2.5rem !important; /* Sesuaikan kelengkungan */
+    }
+
+    .search-form-elem .form-control {
+        font-size: 1.6rem !important; /* Kecilkan font input */
+    }
+
+    .text-purple {
+        width: 24px; /* Kecilkan ukuran icon search di HP */
+    }
+}

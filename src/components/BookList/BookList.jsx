@@ -13,8 +13,11 @@ const BookList = () => {
     return {
       ...singleBook,
       // removing /works/ to get only id
-      id: (singleBook.id).replace("/works/", ""),
-      cover_img: singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg
+      //id: (singleBook.id).replace("/works/", ""),
+      //cover_img: singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg
+      id: String(singleBook.id), 
+      // Gunakan placeholder atau data cover_id langsung dari Sheet jika itu berupa link
+      cover_img: singleBook.cover_id ? singleBook.cover_id : coverImg
     }
   });
 
